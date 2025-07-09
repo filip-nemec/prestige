@@ -125,13 +125,11 @@
       content: "__";
       display: block;
       position: absolute;
-      top: 55%;
+      top: 53%;
       color: rgba(255, 255, 255, 0);
 
       transform: translateY(-50%);
-      background: url("../images/icons/other/arrow-down-300.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
+      background: url("../images/icons/other/arrow-down-300.svg") no-repeat;
       right: 1rem;
       font-size: 1.6rem;
       transition: transform 0.3s;
@@ -142,10 +140,10 @@
     }
 
     .accordion-content {
-      // pridane pre animaciu otvarania a zatvarania menu
+      // animacia otvarania a zatvarania menu
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.8s; //cubic-bezier(0.4, 0, 0, 0.8)
+      transition: max-height 0.7s; // cubic-bezier(0.4, 0, 0, 0.8)
 
       li {
         padding-left: 0.8rem;
@@ -154,15 +152,16 @@
 
     .accordion-input:checked ~ .accordion-content {
       display: block;
+      max-height: 500px; // animacia otvarania a zatvarania menu
     }
 
     .accordion-input:checked ~ .accordion-label::after {
-      transform: translateY(-50%) rotate(0.5turn);
+      transform: translateY(-50%) rotate(0.5turn); // animacia
     }
 
-    .accordion-input[type="checkbox"]:checked + label + .accordion-content {
-      max-height: 500px; // pridane pre animaciu otvarania a zatvarania menu
-    }
+    // .accordion-input[type="checkbox"]:checked + label + .accordion-content {
+    //   max-height: 500px; // pridane pre animaciu otvarania a zatvarania menu
+    // }
   }
 
   div.footer-whitespace {

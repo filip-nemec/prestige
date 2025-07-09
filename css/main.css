@@ -362,12 +362,10 @@ a {
     content: "__";
     display: block;
     position: absolute;
-    top: 55%;
+    top: 53%;
     color: rgba(255, 255, 255, 0);
     transform: translateY(-50%);
-    background: url("../images/icons/other/arrow-down-300.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../images/icons/other/arrow-down-300.svg") no-repeat;
     right: 1rem;
     font-size: 1.6rem;
     transition: transform 0.3s;
@@ -378,19 +376,17 @@ a {
   .footer-content-tablet-mobile .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s;
+    transition: max-height 0.7s;
   }
   .footer-content-tablet-mobile .accordion-content li {
     padding-left: 0.8rem;
   }
   .footer-content-tablet-mobile .accordion-input:checked ~ .accordion-content {
     display: block;
+    max-height: 500px;
   }
   .footer-content-tablet-mobile .accordion-input:checked ~ .accordion-label::after {
     transform: translateY(-50%) rotate(0.5turn);
-  }
-  .footer-content-tablet-mobile .accordion-input[type=checkbox]:checked + label + .accordion-content {
-    max-height: 500px;
   }
   div.footer-whitespace {
     height: 2.5rem;
@@ -417,13 +413,13 @@ a {
   }
 }
 .slider {
-  position: fixed;
+  position: absolute;
   top: 2.8rem;
   height: 2.8rem;
   width: 100%;
   background-color: #ffffff;
   font-size: 0.75rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   border-bottom: 1px solid #000000;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -433,11 +429,12 @@ a {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  border-top: 1px solid #000;
 }
 .slider p {
   white-space: nowrap;
   padding: 0 4rem;
-  animation: scroll 20s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 
 @keyframes scroll {
